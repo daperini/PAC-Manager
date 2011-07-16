@@ -1,0 +1,96 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#masthead {
+	background: #EEE;
+	border-bottom: 1px solid #ccc;
+	height: 100px;
+	position: relative;
+}
+
+#masthead h1 {
+	bottom: 25px;
+	color: #888;
+	font: 32px/100% Arial, sans-serif;
+	right: 25px;
+	position: absolute;
+}
+
+#masthead ul {
+	bottom: 0px;
+	list-style: none;
+	position: absolute;
+	left: 25px;
+	height: 25px;
+}
+
+#masthead ul li {
+	display: inline;
+	font: 13px/100% Arial, sans-serif;
+	margin: 0;
+	padding: 8px 12px;
+}
+#masthead ul li.tab {
+	background: #fff;
+	border-top: 2px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+#masthead ul li a {
+	font-weight: bold;
+	color: #555;
+	text-decoration: none;
+}
+
+#masthead ul li a:hover {
+	color: #111;
+	border-bottom: 1px dotted #ccc;
+}
+
+#content {
+	padding: 50px;
+}
+
+#content h2 {
+	color: #666;
+	font: bold 18px/100% Arial, sans-serif;
+}
+
+#content p {
+	color: #777;
+	font: 12px/165% Arial, sans-serif;
+	margin: 12px 0;
+}
+
+#copyright {
+	padding: 25px;
+	text-align: center;
+	clear: both;
+}
+
+#copyright p {
+	color: #999;
+	font: 11px/100% Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+/* Form Elements */
+
+#signupForm,
+#loginForm {
+	width: 300px;
+	padding: 25px;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+#loginForm  {
+	margin-left: 25px;
+}
+
+label, input {
+	display: block;
+}
