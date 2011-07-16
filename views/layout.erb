@@ -1,3 +1,4 @@
+<% @user = params[:user] %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +10,18 @@
 <div id="masthead">
 	<h1>PAC Manager v0.1</h1>
 	<ul>
-		<li class="tab"><a href="/dashboard">Dashboard</a></li>
-		<li class="tab"><a href="/account">Account Settings</a></li>
-		<li class="tab"><a href="/profile">Add Profile</a></li>
-		<% if @user == "admin" %>
-		<li class="tab"><a href="/activity">Add Activity</a></li>
-		<li class="tab"><a href="/list">View All Users</a></li>
+		<% case @user when "admin", "participant" %>
+		<li class="tab"><a href="/dashboard?user=<%=@user%>">Dashboard</a></li>
+		<li class="tab"><a href="/account?user=<%=@user%>">Account Settings</a></li>
+		<li class="tab"><a href="/profile?user=<%=@user%>">Add Profile</a></li>
 		<% end %>
+		<% if @user == "admin" %>
+		<li class="tab"><a href="/activity?user=<%=@user%>">Add Activity</a></li>
+		<li class="tab"><a href="/list?user=<%=@user%>">View All Users</a></li>
+		<% end %>
+		<% case @user when "admin", "participant" %>
 		<li><a href="/">Sign Out</a></li>
+		<% end %>
 	</ul>
 </div>
 <div id="content">

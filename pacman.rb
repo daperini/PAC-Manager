@@ -15,11 +15,9 @@ get "/:content/?" do
 	@content
 end
 
-#Variables
-@user = "admin"
-
 helpers do
 	def find_content(content)
+		@user = params[:user]
 		case content
 		when "dashboard"
 			erb :dashboard
